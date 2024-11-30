@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Sixops Dev.</title>
+    <link rel="icon" href="Screenshot 2024-11-29 174348.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, rgb(23, 23, 23), #222, rgb(23, 23, 23));
+            animation: backgroundAnimation 5s ease infinite;
+            color: #00ff00; 
+            display: flex;
+            flex-direction: column;
+            min-height: 90vh;
+            cursor: url('https://cdn.jsdelivr.net/gh/robertcooper/awesome-workspace/cursor/cursor-pointer.png'), auto; /* Custom Cursor */
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background: linear-gradient(45deg, rgb(23, 23, 23), #222, rgb(23, 23, 23)); }
+            50% { background: linear-gradient(45deg, #222, rgb(23, 23, 23), #222); }
+            100% { background: linear-gradient(45deg, rgb(23, 23, 23), #222, rgb(23, 23, 23)); }
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            background-color: rgb(23, 23, 23); 
+            color: #00ff00; 
+            padding: 20px 40px;
+            border-bottom: 2px solid #00ff00; 
+            position: relative;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Arial Black', Arial, sans-serif; 
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            width: 100%; 
+        }
+
+        .nav a {
+            text-decoration: none;
+            font-size: 22px;
+            color: #00ff00;
+            background-color: rgb(23, 23, 23);
+            padding: 15px 25px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #00ff00;
+        }
+
+        .nav a:hover {
+            background-color: #333;
+            color: #fff;
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #00ff00;
+        }
+
+        .nav .left {
+            margin-right: auto;
+        }
+
+        .nav .right {
+            display: flex;
+            gap: 20px;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 40px 20px;
+            flex-grow: 1;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            font-size: 1.2em;
+            color: #00ff00;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .main-content p {
+            font-size: 1.2em;
+            color: #00ff00;
+            margin-bottom: 0;
+            letter-spacing: 1px;
+        }
+
+        .footer-img {
+            text-align: center;
+            margin-top: -20px;
+            padding-bottom: 0;
+        }
+
+        .footer-img img {
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+        .className {
+            background-color: rgb(23, 23, 23);
+            padding: 45px;
+            text-align: center;
+        }
+
+        /* Scroll to Top Button */
+        #scroll-to-top-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #00ff00;
+            color: rgb(24, 24, 24);
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 18px;
+            display: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #scroll-to-top-btn:hover {
+            background-color: #333;
+        }
+
+        /* Floating Action Buttons with the same theme */
+        .fab {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: rgb(23, 23, 23);
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            padding: 15px 25px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            background-color: #333;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <div class="nav">
+            <a href="Changelog.html" class="left">Changelog</a>
+            <h1>WELCOME</h1>
+            <div class="right">
+                <a href="games2.html">Our Games</a> 
+                <a href="About_us.html">About Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <p>This is Sixop Development's Official Website</p>
+    </div>
+
+    <!-- Footer Section with Image -->
+    <div class="footer-img">
+        <img src="Screenshot 2024-11-29 174348.png" alt="Sixops Image">
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top-btn" onclick="scrollToTop()">↑</button>
+
+    <!-- Floating Action Buttons -->
+    <a href="Contact.html">
+        <button class="fab">Contact</button>
+    </a>
+    <a href="Support.html">
+        <button class="fab" style="bottom: 140px;">Support</button>
+    </a>
+
+    <div class="className"></div>
+
+    <script>
+        // Show/Hide Scroll to Top Button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.getElementById('scroll-to-top-btn').style.display = 'block';
+            } else {
+                document.getElementById('scroll-to-top-btn').style.display = 'none';
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+</html>
