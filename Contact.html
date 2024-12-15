@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Sixops Dev</title>
+    <link rel="icon" href="Screenshot 2024-11-29 174348.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, rgb(23, 23, 23), #222, rgb(23, 23, 23));
+            color: #00ff00; 
+            display: flex;
+            flex-direction: column;
+            min-height: 90vh; 
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            background-color: rgb(23, 23, 23); 
+            color: #00ff00; 
+            padding: 20px 40px;
+            border-bottom: 2px solid #00ff00; 
+            position: relative;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Arial Black', Arial, sans-serif; 
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            width: 100%; 
+        }
+
+        /* Style for all buttons in the navigation */
+        .nav a, .nav .home-button, .form-container button {
+            text-decoration: none;
+            font-size: 22px;
+            color: #00ff00;
+            background-color: rgb(23, 23, 23);
+            padding: 12px 25px;
+            border-radius: 12px; /* Rounded edges for all buttons */
+            border: 2px solid #00ff00;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+
+        /* Hover effect for buttons */
+        .nav a:hover, .nav .home-button:hover, .form-container button:hover {
+            background-color: #333;
+            color: #fff;
+            box-shadow: 0 0 8px #00ff00; /* Glowing effect */
+            transform: scale(1.05);
+        }
+
+        .nav .left {
+            margin-right: auto;
+        }
+
+        .nav .right {
+            display: flex;
+            gap: 20px;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 40px 20px;
+            flex-grow: 1;
+        }
+
+        .main-content p {
+            font-size: 1.2em;
+            color: #00ff00;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgb(23, 23, 23);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #00ff00;
+        }
+
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #00ff00;
+            background-color: rgb(24, 24, 24);
+            color: #00ff00;
+            border-radius: 5px;
+        }
+
+        .footer-img {
+            text-align: center;
+            margin-top: -20px;
+            padding-bottom: 0;
+        }
+
+        .footer-img img {
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <div class="nav">
+            <a href="home.html" class="home-button">Back to Home</a> <!-- Custom home button -->
+        </div>
+        <h1>Contact Us</h1> <!-- Added the "Contact Us" title in the center -->
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <p>If you have any questions or comments, feel free to reach out to us!</p>
+
+        <!-- Contact Form -->
+        <div class="form-container">
+            <form action="https://formspree.io/f/myzybnwb" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section with Image -->
+    <div class="footer-img">
+        <img src="Screenshot 2024-11-29 174348.png" alt="Sixops Image">
+    </div>
+
+</body>
+</html>

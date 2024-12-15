@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog | Sixops Dev</title>
+    <link rel="icon" href="Screenshot 2024-11-29 174348.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, rgb(23, 23, 23), #222, rgb(23, 23, 23));
+            color: #00ff00;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(23, 23, 23);
+            color: #00ff00;
+            padding: 20px 40px;
+            border-bottom: 2px solid #00ff00;
+            position: relative;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Arial Black', Arial, sans-serif;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Style for the back to home button and other links */
+        .nav a, .home-button {
+            text-decoration: none;
+            font-size: 22px;
+            color: #00ff00;
+            background-color: rgb(23, 23, 23);
+            padding: 12px 25px;
+            border-radius: 12px;
+            border: 2px solid #00ff00;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+
+        /* Hover effect for buttons */
+        .nav a:hover, .home-button:hover {
+            background-color: rgb(23, 23, 23);
+            color: #fff;
+            box-shadow: 0 0 8px #00ff00;
+            transform: scale(1.05);
+        }
+
+        .changelog-content {
+            padding: 40px 20px;
+            text-align: left;
+            flex-grow: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .changelog-entry {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            background-color: rgba(23, 23, 23, 0.7);
+        }
+
+        .changelog-entry h3 {
+            margin: 0;
+            font-size: 1.5em;
+            text-decoration: underline;
+        }
+
+        .changelog-entry p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #00ff00;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <div class="nav">
+            <a href="index.html" class="home-button">Back to Home</a>
+            <h1>Changelog</h1>
+        </div>
+    </div>
+
+    <!-- Changelog Content Section -->
+    <div class="changelog-content">
+        <div class="changelog-entry">
+            <h3>Version 1.3.0 - November 30, 2024</h3>
+            <p>- Added working sign-up/login screen</p>
+            <p>- Added "Games" page</p>
+            <p>- Fixed some bugs</p>
+            <p>- Changed some colors</p>
+        </div>
+        
+        <div class="changelog-entry">
+            <h3>Version 1.2.0 - November 29, 2024</h3>
+            <p>- Added new features to the main website.</p>
+            <p>- Improved UI animations and performance.</p>
+            <p>- Bug fixes and general improvements.</p>
+        </div>
+
+        <div class="changelog-entry">
+            <h3>Version 1.1.0 - October 15, 2024</h3>
+            <p>- Introduced a new section for announcements.</p>
+            <p>- Updated navigation for better accessibility.</p>
+        </div>
+
+        <div class="changelog-entry">
+            <h3>Version 1.0.0 - September 10, 2024</h3>
+            <p>- Initial release of the website.</p>
+            <p>- Basic features and content published.</p>
+            <p>- Started Project Sixops Development.</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+</body>
+</html>

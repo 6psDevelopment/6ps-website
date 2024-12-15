@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup - Sixops Dev</title>
+    <link rel="icon" href="Screenshot 2024-11-29 174348.png" type="image/png">
+    <style>
+        /* Core styles */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: radial-gradient(circle at top right, #0f0f0f, #000);
+            color: #00ff00;
+            text-align: center;
+            padding: 50px;
+            overflow: hidden;
+            animation: backgroundScroll 10s infinite linear;
+        }
+
+        form {
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid #00ff00;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px #00ff00;
+            animation: pulseGlow 3s infinite;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            display: block;
+            margin: 10px auto;
+            padding: 15px;
+            width: 80%;
+            border: none;
+            border-radius: 8px;
+            background-color: #111;
+            color: #00ff00;
+            box-shadow: inset 0 0 10px #00ff00;
+            font-size: 1.1em;
+        }
+
+        input[type="submit"] {
+            background-color: #00ff00;
+            color: #000;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2em;
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #000;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            transform: scale(1.1);
+        }
+
+        .toggle-link {
+            color: #00ff00;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: underline;
+        }
+
+        .forgot-password {
+            color: #00ff00;
+            margin-top: 10px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 3em;
+            animation: flickerText 2s infinite alternate;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 15px 30px;
+            background-color: #00ff00;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2em;
+            text-decoration: none;
+            box-shadow: 0 0 20px #00ff00;
+            transition: transform 0.3s ease;
+        }
+
+        .back-button:hover {
+            transform: rotate(360deg) scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes flickerText {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 0.5; }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 20px #00ff00;
+            }
+            50% {
+                box-shadow: 0 0 40px #00ff00;
+            }
+        }
+
+        @keyframes backgroundScroll {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Sixops Dev</h1>
+
+    <form id="auth-form">
+        <h2 id="form-title">Sign Up</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <div class="remember-me">
+            <input type="checkbox" id="remember-me"> <label for="remember-me">Remember Me</label>
+        </div>
+        <input type="submit" value="Sign Up">
+        <span class="toggle-link" onclick="toggleForm()">Already have an account? Login here!</span>
+        <p class="error-message" id="error-message"></p>
+        <div class="forgot-password">
+            <a href="#" onclick="forgotPassword()">Forgot Password?</a>
+        </div>
+    </form>
+
+    <a href="index.html" class="back-button">Back to Home</a>
+
+    <script>
+        const whitelistedCredentials = [
+            { username: "admin", email: "admin@sixops.com", password: "admin123" },
+            { username: "user", email: "user@sixops.com", password: "password" }
+        ];
+
+        function toggleForm() {
+            const formTitle = document.getElementById('form-title');
+            const submitButton = document.querySelector('input[type="submit"]');
+            const toggleLink = document.querySelector('.toggle-link');
+
+            if (formTitle.innerText === 'Sign Up') {
+                formTitle.innerText = 'Login';
+                submitButton.value = 'Login';
+                toggleLink.innerText = "Don't have an account? Sign up here!";
+            } else {
+                formTitle.innerText = 'Sign Up';
+                submitButton.value = 'Sign Up';
+                toggleLink.innerText = "Already have an account? Login here!";
+            }
+        }
+
+        function forgotPassword() {
+            alert("Forgot password functionality is not implemented yet.");
+        }
+
+        document.getElementById('auth-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formTitle = document.getElementById('form-title').innerText;
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            if (formTitle === 'Login') {
+                // Only allow login for whitelisted users
+                const validLogin = whitelistedCredentials.some(user =>
+                    (user.username === username || user.email === email) && user.password === password
+                );
+
+                if (validLogin) {
+                    alert("Login successful!");
+                    window.location.href = 'home.html';
+                } else {
+                    errorMessage.innerText = 'Invalid credentials. Access denied!';
+                }
+            } else {
+                // Signup logic
+                alert("Sign up successful!");
+                window.location.href = 'home.html';
+            }
+        });
+    </script>
+
+</body>
+</html>

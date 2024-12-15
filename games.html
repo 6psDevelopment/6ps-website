@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Games</title>
+    <link rel="icon" href="Screenshot 2024-11-29 174348.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(23, 23, 23); /* Black background */
+            color: #00ff00; /* Green text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(23, 23, 23);
+            color: #00ff00;
+            padding: 20px 40px;
+            border-bottom: 2px solid #00ff00;
+            width: 100%;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-family: 'Arial Black', Arial, sans-serif;
+            margin: 0;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav a {
+            text-decoration: none;
+            font-size: 22px;
+            color: #00ff00;
+            padding: 15px 25px;
+            border-radius: 5px;
+            border: 2px solid #00ff00;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: #333;
+            color: #fff;
+            transform: scale(1.1);
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        .main-content {
+            width: 80%;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .games-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .game-card {
+            background-color: rgb(30, 30, 30);
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            color: #00ff00;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #00ff00;
+        }
+
+        .game-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .game-card h3 {
+            font-size: 1.5em;
+            margin-top: 15px;
+        }
+
+        .footer-img {
+            text-align: center;
+            margin-top: 40px;
+            padding-bottom: 20px;
+        }
+
+        .footer-img img {
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Our Games</h1>
+        <div class="nav">
+            <a href="index.html">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <p>Explore the games created by Sixop Development</p>
+
+        <!-- Games List Section -->
+        <div class="games-list">
+            <!-- Game 1 -->
+            <div class="game-card">
+                <img src="game1_image.png" alt="Game 1">
+                <h3>'06</h3>
+                <p>Setting: German laboratory in 1940s, WW2
+                    Theme: Horror and Survival
+                    Mobs: Scientists and Militia
+                    Weapons: A cool little science experiment gun
+                    Structures: Different rooms in the laboratory
+                    AI: Basic enemy AI with minor tweaks</p>
+            </div>
+
+            <!-- Game 2 -->
+            <div class="game-card">
+                <img src="game2_image.png" alt="Game 2">
+                <h3>Game Title 2</h3>
+                <p>Game 2 Description</p>
+            </div>
+
+            <!-- Game 3 -->
+            <div class="game-card">
+                <img src="game3_image.png" alt="Game 3">
+                <h3>Game Title 3</h3>
+                <p>Game 3 Description</p>
+            </div>
+
+            <!-- Game 4 -->
+            <div class="game-card">
+                <img src="game4_image.png" alt="Game 4">
+                <h3>Game Title 4</h3>
+                <p>Game 4 Description</p>
+            </div>
+
+            <!-- Game 5 -->
+            <div class="game-card">
+                <img src="game4_image.png" alt="Game 5">
+                <h3>Game Title 5</h3>
+                <p>Game 5 Description</p>
+            </div>
+    </div>
+
+    <!-- Footer Section with Image -->
+    <div class="footer-img">
+        <img src="Screenshot 2024-11-29 174348.png" alt="Sixops Image">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sixops About Us</title>
+    <link rel="icon" href="Screenshot 2024-11-29 174348.png" type="image/png">
+    <style>
+        /* Body and Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, rgb(23, 23, 23), #222, rgb(23, 23, 23));
+            color: #00ff00;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        /* Header Container */
+        .header-container {
+            width: 100%;
+            position: relative;
+            text-align: center;
+            padding-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Header Styling */
+        .header h1 {
+            font-family: 'Arial Black', Arial, sans-serif;
+            font-size: 2.5em;
+            margin: 0;
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        /* Back Button Styling */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            color: #00ff00;
+            font-size: 1em;
+            padding: 15px 40px;
+            border: 2px solid #00ff00;
+            border-radius: 15px;
+            background-color: #171717;
+            transition: all 0.4s ease-in-out;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.75); /* Outer glow effect */
+        }
+
+        .back-button:hover {
+            background-color: #222;
+            color: #fff;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 1), 0 0 60px rgba(0, 255, 0, 1); /* Stronger glow on hover */
+        }
+
+        /* Content Styling */
+        .content {
+            margin-top: 20px;
+            padding: 0 20px;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        .content p {
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+
+        /* Future Plans Section */
+        .plans {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #171717;
+            border-radius: 5px;
+            border: 2px solid #00ff00;
+            width: 30%;
+            box-sizing: border-box;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .plans h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #00ff00;
+        }
+
+        .plans ul {
+            list-style-type: disc;
+            margin: 0;
+            padding-left: 0;
+            list-style-position: inside;
+        }
+
+        .plans ul li {
+            margin: 10px 0;
+            font-size: 1.1em;
+            padding-left: 10px;
+        }
+
+        /* Footer Image */
+        .footer-img {
+            text-align: center;
+            margin-top: 30px;
+            padding-bottom: 0;
+        }
+
+        .footer-img img {
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section with Back to Home Button -->
+    <div class="header-container">
+        <a href="index.html" class="back-button">Back to Home</a>
+        <div class="header">
+            <h1>About Us</h1>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <p>Hi, We are the Sixops staff team.</p>
+        <p>We are very happy you are using our games and we hope to bring better updates in the future.</p>
+    </div>
+
+    <!-- Future Plans Section -->
+    <div class="plans">
+        <h2>Our Plans for the Future:</h2>
+        <ul>
+            <li>Become a huge game development company</li>
+            <li>Finish our first game called '06</li>
+            <li>Expand our development to Virtual Reality</li>
+            <li>Make some popular applications</li>
+        </ul>
+    </div>
+
+    <!-- Footer Section with Image -->
+    <div class="footer-img">
+        <img src="Screenshot 2024-11-29 174348.png" alt="Sixops Image">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Sixops Dev</title>
+    <link rel="icon" href="Screenshot 2024-11-29 174348.png" type="image/png">
+    <style>
+        /* Body and Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, rgb(23, 23, 23), #222, rgb(23, 23, 23));
+            color: #00ff00;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styling */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(23, 23, 23);
+            color: #00ff00;
+            padding: 20px 40px;
+            border-bottom: 2px solid #00ff00;
+            position: relative;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Arial Black', Arial, sans-serif;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .nav a {
+            text-decoration: none;
+            font-size: 22px;
+            color: #00ff00;
+            background-color: rgb(23, 23, 23);
+            padding: 15px 25px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #00ff00;
+        }
+
+        .nav a:hover {
+            background-color: #333;
+            color: #fff;
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #00ff00;
+        }
+
+        .nav .left {
+            margin-right: auto;
+        }
+
+        .nav .right {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Back to Home Button */
+        .back-to-home {
+            font-size: 18px;
+            color: #00ff00;
+            text-decoration: none;
+            border: 2px solid #00ff00;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: rgb(23, 23, 23);
+            margin: 10px 0;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .back-to-home:hover {
+            background-color: #333;
+            color: #fff;
+            transform: scale(1.1);
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            text-align: center;
+            padding: 40px 20px;
+            flex-grow: 1;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Support Form Styling */
+        .support-form-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgb(23, 23, 23);
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid #00ff00;
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        .support-form-container h2 {
+            font-size: 2em;
+            color: #00ff00;
+            margin-bottom: 20px;
+        }
+
+        .support-form-container input,
+        .support-form-container textarea,
+        .support-form-container select {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #00ff00;
+            background-color: rgb(24, 24, 24);
+            color: #00ff00;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .support-form-container button {
+            padding: 15px 25px;
+            background-color: #00ff00;
+            color: rgb(24, 24, 24);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .support-form-container button:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Chat Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgb(23, 23, 23);
+            color: #00ff00;
+            width: 350px;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #00ff00;
+            box-shadow: 0 0 15px #00ff00;
+            display: none;
+        }
+
+        .chat-widget.active {
+            display: block;
+        }
+
+        .chat-widget-header {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .chat-widget-messages {
+            max-height: 200px;
+            overflow-y: auto;
+            background-color: #111;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            color: #00ff00;
+        }
+
+        .chat-widget input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #00ff00;
+            background-color: rgb(24, 24, 24);
+            color: #00ff00;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        .footer-img {
+            text-align: center;
+            margin-top: -20px;
+            padding-bottom: 0;
+        }
+
+        .footer-img img {
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <div class="nav">
+            <a href="home.html" class="back-to-home">Back to Home</a>
+            <h1>Support</h1>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <p>We are here to assist you! If you're having any issues, please fill out the form below, and we'll get back to you as soon as possible.</p>
+
+        <!-- Support Form Section -->
+        <div class="support-form-container">
+            <h2>Contact Support</h2>
+            <form action="https://formspree.io/f/myzybnwb" method="POST" id="support-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="issue" placeholder="Describe your issue" rows="5" required></textarea>
+                <select name="category">
+                    <option value="technical">Technical Issue</option>
+                    <option value="billing">Billing</option>
+                    <option value="other">Other</option>
+                </select>
+                <button type="submit">Submit Ticket</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chat-widget">
+        <div class="chat-widget-header">Support Chat</div>
+        <div class="chat-widget-messages" id="chat-messages"></div>
+        <input type="text" id="chat-input" placeholder="Type your message..." oninput="enableSendButton()">
+        <button id="send-button" disabled onclick="sendMessage()">Send</button>
+    </div>
+
+    <!-- Footer Section with Image -->
+    <div class="footer-img">
+        <img src="Screenshot 2024-11-29 174348.png" alt="Sixops Image">
+    </div>
+
+    <!-- Script for Live Chat -->
+    <script>
+        let chatWidget = document.getElementById('chat-widget');
+        let sendButton = document.getElementById('send-button');
+        let chatMessages = document.getElementById('chat-messages');
+        let chatInput = document.getElementById('chat-input');
+        let supportForm = document.getElementById('support-form');
+
+        // Show chat widget on page load after 5 seconds
+        window.onload = function() {
+            setTimeout(() => {
+                chatWidget.classList.add('active');
+            }, 5000);
+        };
+
+        // Enable Send button if there's input
+        function enableSendButton() {
+            sendButton.disabled = chatInput.value.trim() === '';
+        }
+
+        // Send message in chat widget
+        function sendMessage() {
+            let message = chatInput.value.trim();
+            if (message) {
+                // Send chat message to Formspree
+                let formData = new FormData();
+                formData.append("name", "Chat Message");
+                formData.append("email", "support@sixops.com");
+                formData.append("issue", message);
+                formData.append("category", "chat");
+                
+                fetch('https://formspree.io/f/myzybnwb', {
+                    method: 'POST',
+                    body: formData
+                }).then(response => {
+                    if (response.ok) {
+                        let messageDiv = document.createElement('div');
+                        messageDiv.textContent = `You: ${message}`;
+                        chatMessages.appendChild(messageDiv);
+                        chatInput.value = '';
+                        enableSendButton();
+                    }
+                }).catch(error => console.error('Error:', error));
+            }
+        }
+    </script>
+
+</body>
+</html>
